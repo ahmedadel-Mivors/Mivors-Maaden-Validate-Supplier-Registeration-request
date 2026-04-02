@@ -129,7 +129,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="ValidateQuestionair" sap:VirtualizedContainerService.HintSize="960.6666666666666,449.65666666666664" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ValidateQuestionair" sap:VirtualizedContainerService.HintSize="752,495.65666666666664" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,7 +148,7 @@
           <av:Size x:Key="ShapeSize">110,70</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="Validate Questuanair Flow" sap:VirtualizedContainerService.HintSize="960.6666666666666,449.65666666666664" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <Flowchart DisplayName="Validate Questuanair Flow" sap:VirtualizedContainerService.HintSize="752,495.65666666666664" sap2010:WorkflowViewState.IdRef="Flowchart_2">
         <Flowchart.Variables>
           <Variable x:TypeArguments="sd2:DataTable" Name="CorrectQuestinarSectionDT" />
           <Variable x:TypeArguments="sd2:DataTable" Name="QuestinarSectionDT" />
@@ -336,26 +336,26 @@
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Get Notifications" sap:VirtualizedContainerService.HintSize="808,8939.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                          <Sequence DisplayName="Get Notifications" sap:VirtualizedContainerService.HintSize="808,6006" sap2010:WorkflowViewState.IdRef="Sequence_22">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Welcome" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="774,5944.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="c3b7c8e7-89d7-4a2b-9239-ef1e1afac58a" Version="V2">
+                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Welcome" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="774,5946" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="c3b7c8e7-89d7-4a2b-9239-ef1e1afac58a" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="772,5772.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="772,5751.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="738,180.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Start open worklist&quot;]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="738,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Start open worklist&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -363,7 +363,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps_WriteLog - Invoke Workflow File (IlpApps\IlpApps_WriteLog.xaml)" sap:VirtualizedContainerService.HintSize="738,186.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IlpApps\IlpApps_WriteLog.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps_WriteLog - Invoke Workflow File (IlpApps\IlpApps_WriteLog.xaml)" sap:VirtualizedContainerService.HintSize="738,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IlpApps\IlpApps_WriteLog.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ApiKey">[In_APiKey]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_Run_Id">[in_Run_Id]</InArgument>
@@ -372,7 +372,7 @@
                                         <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage_1" />
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <uix:NGoToUrl DisplayName="Go To URL - oraclecloud.com" sap:VirtualizedContainerService.HintSize="738,128" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="c3b7c8e7-89d7-4a2b-9239-ef1e1afac58a" Url="https://fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/integration/worklistapp/faces/home.jspx" Version="V5" />
+                                    <uix:NGoToUrl DisplayName="Go To URL - oraclecloud.com" sap:VirtualizedContainerService.HintSize="738,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="c3b7c8e7-89d7-4a2b-9239-ef1e1afac58a" Url="https://fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/integration/worklistapp/faces/home.jspx" Version="V5" />
                                     <uix:NCheckState DisplayName="Check App State 'BPM Worklist'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="738,5213.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="c3b7c8e7-89d7-4a2b-9239-ef1e1afac58a" Timeout="120" Version="V5">
                                       <uix:NCheckState.IfExists>
                                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="736,4739.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">

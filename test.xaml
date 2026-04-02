@@ -122,7 +122,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="672,4863.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="556,5046" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="x:String" Default="[&quot;- Result: ✅ Correct Document&quot; + Environment.NewLine + &quot;- Detected Document Type: Saudi Arabian Commercial Registration Certificate&quot; + Environment.NewLine + &quot;- Confidence: High&quot; + Environment.NewLine + &quot;- Reason: The document contains the title &quot;&quot;Commercial Registration Certificate&quot;&quot;, the CR number, company name, issue date, and expiry date, all of which are key indicators of a commercial registration certificate. The presence of &quot;&quot;Saudi Business Center&quot;&quot; and the website domain &quot;&quot;.saudibusiness.gov.sa&quot;&quot; further confirm that it is a Saudi Arabian document.&quot; + Environment.NewLine + &quot;- Missing or Unclear Fields: None&quot; + Environment.NewLine + &quot;- Extracted Data:&quot; + Environment.NewLine + &quot;{&quot; + Environment.NewLine + &quot;  &quot;&quot;company_name&quot;&quot;: &quot;&quot;WJ SAUDI COMPANY LIMITED&quot;&quot;,&quot; + Environment.NewLine + &quot;  &quot;&quot;cr_number&quot;&quot;: &quot;&quot;7025565545&quot;&quot;,&quot; + Environment.NewLine + &quot;  &quot;&quot;expiration_date&quot;&quot;: &quot;&quot;17/07/2026&quot;&quot;&quot; + Environment.NewLine + &quot;}&quot;]" Name="ValidationStatus" />
@@ -133,13 +133,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Questionnaire Test Consultant 1 - Suppli(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556,4792" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Questionnaire Test Consultant 1 - Suppli(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556,4975.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,4588" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,4771.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="respod" />
               <Variable x:TypeArguments="x:String" Name="Question">
@@ -153,12 +153,17 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'a. Agree to SubmitResp…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,147.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" TextString="[respod]" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2. VAT Registration Cer…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="7ff80d80-bf2e-4120-9d97-36b4748e124b" DesignTimeRectangle="147, 609, 239, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='A' aaname='2. VAT Registration Certificate' colName='*Supplier Pre Requisite Certificates and Attachments*' href='#' visibleinnertext='2. VAT Registration Certificate' /&gt;" Guid="e249a8fb-f815-4c70-a556-15f6858c9dde" InformativeScreenshot="eae342dae7a702c4287806add42d8a3e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'a. Agree to SubmitResp…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" TextString="[respod]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="611, 474, 907, 180" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tableCol='6' tableRow='1' tag='SPAN' colName='&quot;+Question+&quot;*' innertext='*.*Response Attachments*' rowName='*' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl type='' class='x1a' tag='SPAN' colName='&quot;+Question+&quot;*' rowName='*' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:colName='0.0' fuzzylevel:rowName='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&quot;]" Guid="1330ec14-8ec1-447b-9122-356097d9dcf6" InformativeScreenshot="ad47061be68f1b436d260e0ddc7cd44d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire: *Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <Assign sap:VirtualizedContainerService.HintSize="520,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign sap:VirtualizedContainerService.HintSize="520,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[respod]</OutArgument>
               </Assign.To>

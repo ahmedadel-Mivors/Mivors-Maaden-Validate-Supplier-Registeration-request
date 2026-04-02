@@ -53,7 +53,6 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
@@ -110,25 +109,25 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Log_Into_ERP" sap:VirtualizedContainerService.HintSize="954.6666666666666,982.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Log_Into_ERP" sap:VirtualizedContainerService.HintSize="746,1038.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Sign In(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,960" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="7f423aaa-06a1-4834-acf8-f8ffe5112355" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Sign In(1)" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="452,1016" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="7f423aaa-06a1-4834-acf8-f8ffe5112355" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,837.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,821.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="416,197.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_Madeen_user]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="416,189.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_Madeen_user]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0c13c55-86b3-4a3a-811a-92db1dfb0338" InformativeScreenshot="7f6383eef6f927362b1b75970489c2f1" Selector="&lt;html app='msedge.exe' htmlwindowname='*' title='Sign In' /&gt;&lt;webctrl tag='INPUT' name='userid' type='text' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
               </ui:TypeInto.Target>
@@ -138,7 +137,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="7f423aaa-06a1-4834-acf8-f8ffe5112355" SecureText="[in_Madeen_pass]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="7f423aaa-06a1-4834-acf8-f8ffe5112355" SecureText="[in_Madeen_pass]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="login-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/oam/server/obrareq.cgi" CVScreenId="61e3cfff-b978-4e1f-8da7-ee1a79ddbdfd" CvElementArea="753, 747, 413, 47" CvType="InputBox" DesignTimeRectangle="715, 888, 489, 53" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='textInput' placeholder='Password' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="81ef12e2-b7b5-449e-a1af-dab523542cc1" InformativeScreenshot="378175d92c33e26492a3cfd4896fe316.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='vw3zlx7h1' title='Sign In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>

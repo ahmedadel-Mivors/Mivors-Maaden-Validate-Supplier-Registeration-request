@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QKWL5BvY2UW6SrOWhn8dDw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="7ff80d80-bf2e-4120-9d97-36b4748e124b" DesignTimeRectangle="147, 609, 239, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='A' aaname='2. VAT Registration Certificate' colName='*Supplier Pre Requisite Certificates and Attachments*' href='#' visibleinnertext='2. VAT Registration Certificate' /&gt;" Guid="e249a8fb-f815-4c70-a556-15f6858c9dde" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="eae342dae7a702c4287806add42d8a3e.png" xmlns="">0d8EBmunQk02uuqOIoE3d7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
