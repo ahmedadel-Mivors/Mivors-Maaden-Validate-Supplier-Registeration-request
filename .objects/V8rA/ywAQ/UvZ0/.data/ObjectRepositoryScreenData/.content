@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="DM_Gz4gSkUu0gSulRx3Y3g" Reference="YngkLTyCX0ORUgEe7GnCQw/mjuPTiZ8UEG9i1HtegkorQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="113, 5, 1718, 960" BrowserType="Edge" ContentHash="2A_qmtJrvUWdIkGwe5VFtg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACxSURBVDhPY3gro/KfEsyALkAqHkQGfHD3/f/r2In/hMDPHbv+v7ewRzUApPnfx49gBX8fPwEbhA3D1IDod1pGCANgNv9YtRbDicgYpAnkAmS1YANgpqJrwIZBzkdWDzcA5Ap0xbgwDKAYAALIgYMLfwqNBqv9c+UawoDvs+fDBUEK0DXB8OfkTHhAfm1oQRgAChyQZmIBcmCjJKQvhWUYUYeMQTEAUoOsh3opkVxMsQEAeeKZe/jyOhcAAAAASUVORK5CYII=" Reference="YngkLTyCX0ORUgEe7GnCQw/mjuPTiZ8UEG9i1HtegkorQ" Selector="[&quot;&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request &quot;+RequestNum+&quot;*' /&gt;&quot;]" Url="https://*.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow?bpmWorklistTaskId=ac76540f-78bf-4d20-9699-b8a22cb2cf66&amp;bpmWorklistContext=3056d38f-3f36-4cbd-b9ae-aa6c29d9da49%3B%3BG%3B%3Bd1JxBJoQpQNR1MQZ3yYK2c2UUVo%2BZyNl0iSSrxaQ6vrNNShcllYfH6aItfD9%2Bcq1t7ypJ5ThoYhMWlgtRDbFbdyRtox%2BYWdrFI5Lao9D9Z3umV4fHjykjIgC24RJlOcOat55yRUu6g%2FAZyLpf1Ad6IzqIrgeoCsO3IHbvWSpDBU%3D&amp;bpmWorklistHttpURL=https%3A%2F%2Ffa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com%3A443%2Fintegration%2Fworklistapp%2Ffaces&amp;bpmWorklistHome=home.jspx&amp;bpmWorklistReassign=reassignTask.jspx&amp;bpmWorklistRoute=routeTask.jspx&amp;bpmWorklistRequestInfo=requestInfo.jspx&amp;bpmWorklistSecurity=signTask.jspx&amp;tz=Asia%2FRiyadh&amp;lg=en&amp;cy=&amp;vr=&amp;dispNameLg=en&amp;dispNameCy=&amp;dispNameVr=&amp;df=medium&amp;dt=both&amp;tf=short&amp;dateTimePattern=dd-MMM-yyyy+h%3Amm+a&amp;sf=alta&amp;acMode=default&amp;bpmWorklistSessionTimeoutInterval=900&amp;bpmBrowserWindowStatus=taskFlowReturn&amp;adf.tfDoc=%2FWEB-INF%2Foracle%2Fapps%2Fprc%2Fpoz%2Fnotifications%2Fui%2Fregistrations%2Fflow%2FSupplierExternalRegistrationApprovalFlow.xml&amp;adf.tfId=SupplierExternalRegistrationApprovalFlow&amp;_task-flow-return=https%3A%2F%2Ffa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com%3A443%2Fintegration%2Fworklistapp%2Ffaces%2Fadf.task-flow-return%3F_afrPage%3Ds1&amp;_afrPage=s2&amp;_afrLoop=53298731931966996&amp;_afrWindowMode=0&amp;_afrWindowId=w1cjmucee3h&amp;_adf.ctrl-state=8k6w42e0_2296&amp;_afrFS=16&amp;_afrMT=screen&amp;_afrMFW=1131&amp;_afrMFH=527&amp;_afrMFDW=1280&amp;_afrMFDH=720&amp;_afrMFC=8&amp;_afrMFCI=0&amp;_afrMFM=0&amp;_afrMFR=144&amp;_afrMFG=0&amp;_afrMFS=0&amp;_afrMFO=0" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.FilePath>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.FilePath>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="fabad4f862e6b7848b7f4bb59150db14.jpg" xmlns="">fabad4f862e6b7848b7f4bb59150db14.jpg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

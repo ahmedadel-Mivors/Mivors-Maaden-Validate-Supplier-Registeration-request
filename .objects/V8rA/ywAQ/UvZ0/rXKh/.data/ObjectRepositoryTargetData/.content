@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bSG-gd0Wf0WNh6tlw3x13g" Reference="irKn090rIUW0yJEHXo-ynw/rXKhR3M1P0-wsTuu3H9YOw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="442, 234, 173, 42" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' parentid='pfl22' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='x2h' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Reason' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="da8a2375-166d-4eac-8d87-586b4563b975" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="366, 244, 65, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='pfl22' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='x32b' aaname='Reason' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Reason' /&gt;" Guid="6f1e6ece-1f13-46a1-b9ba-75b5162a4d8b" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="83c5474a9dd4fe6479a24fa2738493ab.png" xmlns="">0sriE4HLoUUubKFlSgTpIBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

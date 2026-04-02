@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="iMJhCsLKHkK-rbSvUZJkfw" Reference="irKn090rIUW0yJEHXo-ynw/36jTOY8ps0a6XNQZL03kfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="611, 474, 907, 180" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableCol='6' tableRow='1' tag='SPAN' colName='Please upload Commercial Registration Certificate / Certificate of Incorporation*' innertext='a.*Response Attachments*' rowName='*' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='x1a' tag='SPAN' colName='Please upload Commercial Registration Certificate / Certificate of Incorporation*' rowName='*' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:colName='0.0' fuzzylevel:rowName='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1330ec14-8ec1-447b-9122-356097d9dcf6" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire: *Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ad47061be68f1b436d260e0ddc7cd44d.png" xmlns="">0fleM7AY7O0is_ytgK4zqVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

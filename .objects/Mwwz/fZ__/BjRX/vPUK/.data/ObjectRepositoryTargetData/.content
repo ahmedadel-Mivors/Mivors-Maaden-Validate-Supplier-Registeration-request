@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LFediefY2U6uJz2U7QXWYA" Reference="irKn090rIUW0yJEHXo-ynw/vPUKCZvAJEakN5bLH1FRqA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="836, 910, 358, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='_FOpt1:_FOr*' parentname='_FOf1' tableCol='*' tableRow='1' tag='DIV' innertext='*&quot;+Question+&quot;*Response Attachments&quot;+respodattach+&quot;*' /&gt;&lt;webctrl aaname='*&quot;+respodattach+&quot;*' tableRow='1' tag='SPAN' innertext='*&quot;+respodattach+&quot;*' rowName='*Response Attachments' /&gt;&quot;]" Guid="d5c84b48-3934-4d4d-9010-d0619182dc9c" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:* Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="834b8bba4cb42a35236ccbc4919c3823.png" xmlns="">043U3o80TPkyMuPPFBz2duA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

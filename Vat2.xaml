@@ -1,0 +1,656 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Vat2" this:Vat2.VATNumber="33987457" this:Vat2.SupplierNumber="20230972" this:Vat2.InstantURL="https://fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
+    <x:Property Name="VATNumber" Type="InArgument(x:String)" />
+    <x:Property Name="SupplierNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_Run_Id" Type="InArgument(x:String)" />
+    <x:Property Name="InstantURL" Type="InArgument(x:String)" />
+    <x:Property Name="in_ApiKey" Type="InArgument(x:String)" />
+    <x:Property Name="in_IlpappTanant" Type="InArgument(x:String)" />
+    <x:Property Name="SupplierDoc" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Vat2.in_Run_Id>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Vat2.in_Run_Id>
+  <this:Vat2.in_IlpappTanant>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Vat2.in_IlpappTanant>
+  <this:Vat2.SupplierDoc>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Vat2.SupplierDoc>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Vat2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Vat2" sap:VirtualizedContainerService.HintSize="777.9999999999999,6647.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="594,6624.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps_WriteLog - Invoke Workflow File (IlpApps\IlpApps_WriteLog.xaml)" sap:VirtualizedContainerService.HintSize="560,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="IlpApps\IlpApps_WriteLog.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ApiKey">[in_ApiKey]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Run_Id">[in_Run_Id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">Statr Edit VAT</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_IlpappTanant">[in_IlpappTanant]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage_1" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Supplier AHMED ABDULAZIZ M ALHAKBANI - S" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,6364.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,6242" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:UiElement" Name="AddButton" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="524,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" DesignTimeRectangle="2706, 585, 75, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='xiz' tableCol='2' tableRow='1' tag='TABLE' colName='Supplier:*' innertext='Save and CloseEditDone' /&gt;&lt;webctrl aaname='Edit' aria-role='button' tableRow='1' tag='A' /&gt;" Guid="89503d2d-43a5-4d98-bd3a-73166ad1265a" InformativeScreenshot="79df98701c33771178bce9a2f2d59045.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NCheckState DisplayName="Check App State 'Profile'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="524,1457.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Timeout="20" Version="V5">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1074" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="Api_Results" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="API_StatusCode" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="True" DisplayName="Keyboard Shortcuts 'pane'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Shortcuts="[d(hk)][k(PgDn)][u(hk)]" Version="V5">
+                      <uix:NKeyboardShortcuts.Target>
+                        <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" ContentHash="s8M7O0SmCkS1V3eEK0x-Kg" DesignTimeRectangle="13, 173, 3072, 1664" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='*- Oracle Fusion Cloud Applications - *' role='pane' /&gt;&lt;ctrl idx='70' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Overview - Purchase Orders - Oracle Fusion Cloud Applications - *' role='pane' fuzzylevel:name='0.0' /&gt;&lt;ctrl automationid='' role='pane' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;" Guid="2b774e3a-4e56-4e61-9b0c-ca8380a5e343" ImageBase64="" InformativeScreenshot="94f28a946648a6994fe12e1c85df834e.png" Reference="UcKJUAHKkUuYiY0FyURcZw/LEhfW7pmFUu1WSxmikKEKA" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='* Oracle Fusion Cloud Applications - *' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NKeyboardShortcuts.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click 'Transaction Tax'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="c86da18f-7a04-4ba6-901f-19c30e7d6069" ContentHash="6GvW1xITB0CJPj8C-WiTfw" DesignTimeRectangle="515, 591, 127, 37" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='  *Validation Type Name *Taxpayer ID Validation Digit *Effective Start Date Effective End Date' aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' tableCol='1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='  *Validation Type Name *Taxpayer ID Validation Digit *Effective Start Date Effective End Date' aria-role='presentation' tag='TABLE' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Transaction Tax' /&gt;" Guid="42d2e173-6ee9-42d1-9f82-68090d59bf77" InformativeScreenshot="b089ab97a9547c1e6c0b0723c476cecf.png" Reference="2gp3oYudzUuGNTHUiPaEiA/vGTzjcIhlE2knUshejzP7Q" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="39d94d84-a003-45fa-ac03-30f2abfd0d81" DesignTimeRectangle="40, 551, 124, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='af_panelHeader_title-table2' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl type='' tag='H2' class='x1cv ' aaname='Profile Details' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Profile Details' /&gt;" Guid="568f78d5-6f88-4987-ba6c-1f365daad7af" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Transaction Tax'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0dc0117d-d15d-488a-b96c-cb359e798dba" ContentHash="KuKuNEizxEqC9QiwX3XPOg" DesignTimeRectangle="238, 652, 137, 37" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='  Tax Regime Code Tax Tax Jurisdiction Code Tax Registration Type Registration Number Default Registration Start Date End Date' aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' tableCol='1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='  Tax Regime Code Tax Tax Jurisdiction Code Tax Registration Type Registration Number Default Registration Start Date End Date' aria-role='presentation' tag='TABLE' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tax Registrations' /&gt;" Guid="429c2862-bef0-442b-8392-fdc340591985" InformativeScreenshot="764029628eed9ae213161fc328f3f2b3.png" Reference="2gp3oYudzUuGNTHUiPaEiA/SOuYNPEFu0mUIBmYLAaHKA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="0dc0117d-d15d-488a-b96c-cb359e798dba" DesignTimeRectangle="519, 600, 113, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='  Tax Regime Code Tax Tax Jurisdiction Code Tax Registration Type Registration Number Default Registration Start Date End Date' aria-role='presentation' tag='TABLE' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl aaname='Transaction Tax' type='' class='xod p_AFSelected' tag='A' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Transaction Tax' /&gt;" Guid="080eb28e-b6f2-40ea-ada0-5048a35f4cd7" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTakeScreenshot DisplayName="Take Screenshot 'Controls and DefaultsTa…'" FileName="[SupplierDoc+&quot;\Vat-&quot;+SupplierNumber+&quot;-before.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,348.6666666666667" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                      <uix:NTakeScreenshot.Target>
+                        <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" ContentHash="ILekMGxbe0GGqmcwcYz57A" DesignTimeRectangle="0, 0, 1938, 1038" ElementVisibilityArgument="Interactive" Guid="32b4af5a-e698-4b3e-a2fe-dc87bb87c092" InformativeScreenshot="f26e3cc11fe6317ffd7eb2f91a206c20.png" Reference="2gp3oYudzUuGNTHUiPaEiA/ZWkO_xsVCkqu8xm0hEP0AQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*- Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NTakeScreenshot.Target>
+                    </uix:NTakeScreenshot>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps Artifatcts - Invoke Workflow File (IlpApps\IlpApps Artifatcts.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="IlpApps\IlpApps Artifatcts.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Run_Id">[in_Run_Id]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_IlpappsTanant">[In_IlpappTanant]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="SupplierNum">[SupplierNumber]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="Api_Results">[Api_Results]</OutArgument>
+                        <OutArgument x:TypeArguments="x:Int32" x:Key="API_StatusCode">[API_StatusCode]</OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="In_AttachmentPath">[SupplierDoc+"\Vat-"+SupplierNumber+"-before.png"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ApiKey">[in_ApiKey]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,154.5" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{Supplier Num :&quot;+SupplierNumber+&quot;}&quot;]" BodyFormat="image/png" DisplayName="HTTP ArtiFact Request (legacy)" EnableSSLVerification="False" EndPoint="[&quot;https://maaden.kpib.ilpapps.com/rpa/runs/&quot;+in_Run_Id+&quot;/artifacts&quot;]" sap:VirtualizedContainerService.HintSize="416,94.5" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[Api_Results]" StatusCode="[API_StatusCode]" TimeoutMS="6000">
+                            <ui:HttpClient.Attachments>
+                              <InArgument x:TypeArguments="x:String" x:Key="file">["C:\Suppliers ScreenShot\Vat-"+SupplierNumber+"-before.png"]</InArgument>
+                            </ui:HttpClient.Attachments>
+                            <ui:HttpClient.Cookies>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Cookies>
+                            <ui:HttpClient.Headers>
+                              <InArgument x:TypeArguments="x:String" x:Key="X-KPIB-API-Key">c03c12258f22b152b0d379e6ddf9e02cddc78437</InArgument>
+                            </ui:HttpClient.Headers>
+                            <ui:HttpClient.Parameters>
+                              <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                            </ui:HttpClient.Parameters>
+                            <ui:HttpClient.UrlSegments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.UrlSegments>
+                          </ui:HttpClient>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" DesignTimeRectangle="320, 524, 640, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='x18w xk7' aaname='{0}' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='{0}' /&gt;&quot;, SupplierNumber)]" Guid="2d15481f-d5ed-43c2-b46e-d5035e04c1e7" InformativeScreenshot="3e81fb028435d8394dd305be91966b85.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="199, 533, 121, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='af_panelLabelAndMessage_label-text' aaname='Supplier Number' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Supplier Number' /&gt;" Guid="645c2f47-7d76-4ad8-a2e6-75c5886eda6e" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NCheckState DisplayName="Check App State 'Tax Registrations'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="524,4533.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_2" OutUiElement="[AddButton]" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Timeout="20" Version="V5">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="522,4075.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="NClick_5" InUiElement="[AddButton]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5" />
+                    <uix:NCheckState DisplayName="Check App State 'Create Tax Registration'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,3839.3333333333335" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Timeout="10" Version="V5">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="486,3381.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="1" DisplayName="Type Into 'Tax Regime Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,244" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Text="KSA VAT" Version="V5">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="bffcbdb1-bdf3-4268-8281-b983d304d8b5" ContentHash="N7Am13nVfUyRBH6NNpvhwQ" CvElementArea="700, 273, 247, 40" CvType="InputBox" DesignTimeRectangle="704, 242, 205, 35" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='text' tag='INPUT' class='xpj' aaname='Tax Regime Code' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="9794fcc1-290e-49db-b364-cdb1fb06f024" InformativeScreenshot="0009ee2706e0f370307d7464878ba24a.png" IsResponsive="True" Reference="2gp3oYudzUuGNTHUiPaEiA/853GdLkIoECsuiUYC_yt8w" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="bffcbdb1-bdf3-4268-8281-b983d304d8b5" DesignTimeRectangle="570, 251, 125, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='af_inputComboboxListOfValues_label-text' aaname='Tax Regime Code' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tax Regime Code' /&gt;" Guid="b7e824ca-54da-4c8a-aa82-d1120b039ff8" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NSelectItem DisplayName="Select Item 'Tax Registration Type'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,192" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="VAT" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="9">
+                                <x:String></x:String>
+                                <x:String>CPF</x:String>
+                                <x:String>CUIL</x:String>
+                                <x:String>CUIT</x:String>
+                                <x:String>DNI</x:String>
+                                <x:String>National code for juridical person</x:String>
+                                <x:String>Others</x:String>
+                                <x:String>Tax identification number</x:String>
+                                <x:String>VAT</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="a9be002a-7c0d-4ffa-9186-37543f2e40b5" ContentHash="iVUuxEz8fkOG3mRH0oeYTQ" CvElementArea="702, 476, 249, 38" CvType="InputBox" DesignTimeRectangle="702, 476, 250, 38" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='SELECT' class='x2h' aaname='Tax Registration Type' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d2b578c2-814b-4360-ae66-f2ab7aefd8c1" InformativeScreenshot="2b9c10917b08a4c5b3fdc8993bc4eb43.png" Reference="2gp3oYudzUuGNTHUiPaEiA/iKSccjjvSEamGZU6GWnpjw" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="767b0d75-6ae7-4a67-a1e1-a2fa8bcefc1b" DesignTimeRectangle="540, 486, 155, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='x32b' aaname='Tax Registration Type' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tax Registration Type' /&gt;" Guid="02eff396-97ed-444a-92c5-d47eb8430bb2" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Registration Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,244" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Text="[VATNumber]" Version="V5">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="161ac077-1ca6-44a7-b423-aaa6fffdafd9" ContentHash="Mw71cFmwzEqlVVpCYdfklg" CvElementArea="699, 779, 211, 38" CvType="InputBox" DesignTimeRectangle="701, 746, 210, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='text' tag='INPUT' class='x25' aaname='Registration Number' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="237d3cc3-00d3-446f-8910-8b5680b7188d" InformativeScreenshot="62cbde43ebd46f0ea8add36ffcda1524.png" IsResponsive="True" Reference="2gp3oYudzUuGNTHUiPaEiA/Ny401luJSEGOv8Ra1mKIRQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="161ac077-1ca6-44a7-b423-aaa6fffdafd9" DesignTimeRectangle="546, 756, 149, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='af_inputText_label-text' aaname='Registration Number' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Registration Number' /&gt;" Guid="2d8b1510-271a-4462-907a-445ce1f5c4e2" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Start Date'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,244" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Text="01-Jan-2018" Version="V5">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="bc04f2a0-efd3-49eb-927d-6318c1614ac1" ContentHash="vMa7FOY9mEeEvig-hD6rJA" DesignTimeRectangle="932, 488, 120, 28" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='INPUT' class='x2b' placeholder='dd-mmm-yyyy' aaname='Start Date' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="ead5be21-200a-4290-a37b-4ee8b37b9c6f" InformativeScreenshot="c55f91a4e5256cd69469dd7233b55614.png" IsResponsive="True" Reference="2gp3oYudzUuGNTHUiPaEiA/OmcaSOLfRUGlk9rnI0Mlgw" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="bc04f2a0-efd3-49eb-927d-6318c1614ac1" CvTextArea="868, 495, 57, 12" CvTextArgument="Start Date" CvType="Text" DesignTimeRectangle="868, 495, 57, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='x32a' aaname='Start Date' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Start Date' /&gt;" Guid="1f1d3639-7a15-4a14-851c-23f3b7afef1c" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="5bce1a0a-4b68-482c-8951-ecff020cf08b" ContentHash="OgCGqRppUEybK89j8_V4NA" DesignTimeRectangle="1403, 894, 43, 35" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='BUTTON' class='xux p_AFTextOnly' aaname='OK' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='OK' /&gt;" Guid="b381b066-c1b0-4ee5-b1c3-9a54b90b7af2" InformativeScreenshot="6204a99b3bc8e796757a3ac25f0f5a61.png" Reference="2gp3oYudzUuGNTHUiPaEiA/X9ZeKWiDfECUfbzNqHJ5PQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="161ac077-1ca6-44a7-b423-aaa6fffdafd9" DesignTimeRectangle="1425, 903, 11, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' tag='SPAN' class='xvc' aaname='K' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='K' /&gt;" Guid="44d55842-f10b-40fb-bb99-ca64282c162f" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'Registration Number'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,2206" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Timeout="20" Version="V5">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1748" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="Api_Results" />
+                                  <Variable x:TypeArguments="x:Int32" Default="0" Name="API_StatusCode" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTakeScreenshot DisplayName="Take Screenshot 'Controls and DefaultsTa…'" FileName="[SupplierDoc+&quot;\Vat-&quot;+SupplierNumber+&quot;-after.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,348.6666666666667" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                                  <uix:NTakeScreenshot.Target>
+                                    <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" ContentHash="ILekMGxbe0GGqmcwcYz57A" DesignTimeRectangle="0, 0, 1938, 1038" ElementVisibilityArgument="Interactive" Guid="32b4af5a-e698-4b3e-a2fe-dc87bb87c092" InformativeScreenshot="a60946f8b5f5962f19e81cea1d7ab346.png" Reference="2gp3oYudzUuGNTHUiPaEiA/ZWkO_xsVCkqu8xm0hEP0AQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*- Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:NTakeScreenshot.Target>
+                                </uix:NTakeScreenshot>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps Artifatcts - Invoke Workflow File (IlpApps\IlpApps Artifatcts.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="IlpApps\IlpApps Artifatcts.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Run_Id">[in_Run_Id]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_IlpappsTanant">[In_IlpappTanant]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="SupplierNum">[SupplierNumber]</InArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="Api_Results">[Api_Results]</OutArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="API_StatusCode">[API_StatusCode]</OutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="In_AttachmentPath">[SupplierDoc+"\Vat-"+SupplierNumber+"-after.png"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_ApiKey">[in_ApiKey]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,154.5" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{Supplier Num :&quot;+SupplierNumber+&quot;}&quot;]" BodyFormat="image/png" DisplayName="HTTP ArtiFact Request (legacy)" EnableSSLVerification="False" EndPoint="[&quot;https://maaden.kpib.ilpapps.com/rpa/runs/&quot;+in_Run_Id+&quot;/artifacts&quot;]" sap:VirtualizedContainerService.HintSize="416,94.5" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" Result="[Api_Results]" StatusCode="[API_StatusCode]" TimeoutMS="6000">
+                                        <ui:HttpClient.Attachments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="file">["C:\Suppliers ScreenShot\Vat-"+SupplierNumber+"-after.png"]</InArgument>
+                                        </ui:HttpClient.Attachments>
+                                        <ui:HttpClient.Cookies>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Cookies>
+                                        <ui:HttpClient.Headers>
+                                          <InArgument x:TypeArguments="x:String" x:Key="X-KPIB-API-Key">c03c12258f22b152b0d379e6ddf9e02cddc78437</InArgument>
+                                        </ui:HttpClient.Headers>
+                                        <ui:HttpClient.Parameters>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                        </ui:HttpClient.Parameters>
+                                        <ui:HttpClient.UrlSegments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.UrlSegments>
+                                      </ui:HttpClient>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" DesignTimeRectangle="1680, 289, 54, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='xiz' tableCol='2' tableRow='1' tag='TABLE' innertext='SaveSave and CloseSubmitCancel' /&gt;&lt;webctrl aria-role='button' tableRow='1' tag='A' aaname='Save' innertext='Save' visibleinnertext='Save' /&gt;" Guid="f272c403-e8f9-4df2-8cd1-cd0429d74a8e" InformativeScreenshot="249c398a519956366c32ffba565dc3e5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" DesignTimeRectangle="1741, 289, 69, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='xiz' tableCol='2' tableRow='1' tag='TABLE' innertext='SaveSave and CloseSubmitCancel' /&gt;&lt;webctrl aaname='Submit' aria-role='button' tableRow='1' tag='A' innertext='Submit' visibleinnertext='Submit' /&gt;" Guid="3618f7ed-fcc7-41f3-bb53-680a81e1786a" InformativeScreenshot="e70e48f1d8c31b8e78c0276e17560196.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'OK_Confirmation Message'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" CVScreenId="0676bb16-92c4-4479-83da-9cab1cc4d0c1" ContentHash="UgAh5-J6fki8XDzC34rnUA" CvElementArea="1004, 357, 48, 38" CvTextArea="1015, 369, 25, 13" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1006, 358, 44, 35" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='6' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='BUTTON' /&gt;" Guid="da683cb0-e2f7-4cba-b3c3-2c7e87e74ceb" InformativeScreenshot="e55d93ae3c90812b2f12f754ad39e98d.png" Reference="UcKJUAHKkUuYiY0FyURcZw/9dM5xSSsU066jWItf4TDwA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='gzfsva2b8' title='Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="0676bb16-92c4-4479-83da-9cab1cc4d0c1" CvTextArea="872, 321, 178, 15" CvTextArgument="Your changes were saved." CvType="Text" DesignTimeRectangle="875, 319, 188, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='x1mu' aaname='Your changes were saved.' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Your changes were saved.' /&gt;" Guid="a60d8a24-0e4b-4316-bbd5-9b6b3a398790" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home Icon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd5216ce-87c0-4f6b-b114-0407f43db759" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome" CVScreenId="d80dd6d6-000b-4e0e-90f2-a155744fa701" ContentHash="TSgSgkLrDEmdwGsHi52jQA" CvElementArea="1614, 188, 38, 36" CvType="Icon" DesignTimeRectangle="1622, 195, 23, 24" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='xiz' tag='TABLE' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl class='svg-outline' type='' aaname='' tag='path' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="47588bfd-60d1-4af5-9f9c-bb0c7eab8cea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAYAAACQ0cTtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFhSURBVEhL7ZExqoNQEEWVYCFaC3YptEznGtK4DavsQLBIaxFBsoFgISSFW7AQtLBLYS3YJ6SKEGQ+48cHvmdiPvGn8sIBmblzryjHcRx8EWYwiizLLfT8DZjBS0zThKqqWvCZ3o/ADAZRVRWiKAJaOMMd7X8CM+jB8zxsNhu43W6k4Hq9tnTCHXrQS9+/XbZarSDPcxKKOh6PoChKy+l06u3Qizd0zssyURTBdV14PB4kCP/Rer1mvN0/7IQ3eIsZtJcpw8CyLMlx0zTg+z5IkkQfEnC33+9bbyfMGHi53wf8LGEYEjPqfD6DYRj0wVPQWxRFLwMzMZuUWZYFl8uFGO73O9i2DYvFggkcQxAEcBwH6romeZiNHdxyuSRDVBzHoGkaE/JXdF2HJEl62b2yw+HAHH1KEATDZbvdjjF/iud5c9nnzGWTMJdNwlw2CU/L0jSF7XY7KVmWDZf9t75a9gNId29xGU/89QAAAABJRU5ErkJggg==" InformativeScreenshot="f0e67b3dc8b4ad245df956ff51023f8f.png" Reference="UcKJUAHKkUuYiY0FyURcZw/ejvkpUoEQUGE2DGSOBnn7w" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='gzfsva2b8' title='Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="d80dd6d6-000b-4e0e-90f2-a155744fa701" CvElementArea="1668, 189, 37, 35" CvType="Icon" DesignTimeRectangle="1672, 197, 30, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='xiz' tag='TABLE' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl aaname='Favorites and Recent Items' type='' tag='A' class='svg-glob xko p_AFIconOnly' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:text='Favorites and Recent Items' /&gt;" Guid="c5bf4e1a-6b4e-40a0-9865-6f5987797c03" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAVCAYAAAAjODzXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIUSURBVEhLpZS7zgFBFMcXD6DRuCUShU5HI6HgGYhokChcIojnIFHSCIXEa7gWQjyDWiPoOF/OJDPZmbPWrO8kv2TzP5f57+zsGIZhwH/o9XoMVf8BImjj9/vhdrsxfD4fyTuECNrM53PgMZvNSN4hRNAilUoJEzwSiQSpcwARvuLxeOB8Pqs+4HQ6sZxarwkRvtJut8Xi0+mUfRYerVaL1GtCBFvwUOLhxOCH1EpT+zQggiWhUAjS6TQsl0vx9vV6XeSbzabQF4sFqw0Gg2SODbIQCAQgl8tBt9uFyWQC6/VavK05DocDuFwu0YfPx+NRLWO9OGM8HrOZ2WyW/fbqusJIPB6H6/WqzvkYyWRSHcT+Gt3AtXBNYgQpFovwfr+lhufzCdvtlu1Op9OBTCYDXq+XmOBgDmuwFnuwF2eY4/V6QaFQUHvlQaVSSZi5XC7QaDTUBsfg+cFZGDgb11BriBHEbAajVquRGl3wdzbvxAcTCBEY1WpVMvPL/WA2YbMTHCII0Iw5nJhRTeAstUaBCBJ4Vzg10+/3pR4NEwgRCOa3wwiHw6SGE4lEpFrzpfcFIliy3+/Z4Pv9Dm63m+Q5mHs8Hqx2s9mQvA1EsIQPX61WJKeCBjCwR83ZQARCLBYTWz0YDCR9OBwy8Jnro9FI1EejUTLvA0Qg4I3LA++USqUCu91OaDzwFi2Xy9IBz+fzZJ4VfyEcrx1kzU0nAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,154.5" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;level&quot;&quot;: &quot;&quot;info&quot;&quot;, &quot;&quot;message&quot;&quot;: &quot;&quot;CR Number Updated Successfully&quot;&quot;}&quot; &amp; Environment.NewLine]" BodyFormat="application/json" DisplayName="HTTP Request (legacy)" EnableSSLVerification="True" EndPoint="[&quot;https://maaden.kpib.ilpapps.com/rpa/runs/&quot;+in_Run_Id+&quot;/events&quot;]" sap:VirtualizedContainerService.HintSize="416,94.5" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[Api_Results]" StatusCode="[API_StatusCode]" TimeoutMS="6000">
+                                        <ui:HttpClient.Attachments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Attachments>
+                                        <ui:HttpClient.Cookies>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Cookies>
+                                        <ui:HttpClient.Headers>
+                                          <InArgument x:TypeArguments="x:String" x:Key="X-KPIB-API-Key">c03c12258f22b152b0d379e6ddf9e02cddc78437</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                        </ui:HttpClient.Headers>
+                                        <ui:HttpClient.Parameters>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                        </ui:HttpClient.Parameters>
+                                        <ui:HttpClient.UrlSegments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.UrlSegments>
+                                      </ui:HttpClient>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IlpApps_WriteLog - Invoke Workflow File (IlpApps\IlpApps_WriteLog.xaml)" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="IlpApps\IlpApps_WriteLog.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_ApiKey">[in_ApiKey]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Run_Id">[in_Run_Id]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">["Supplier : "+SupplierNumber+" Vat Edit Succssfully"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_IlpappTanant">[In_IlpappTanant]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage_1" />
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:InvokeWorkflowFile>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Api_Results]" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,154.5" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;level&quot;&quot;: &quot;&quot;info&quot;&quot;, &quot;&quot;message&quot;&quot;: &quot;&quot;CR Number Updated Successfully&quot;&quot;}&quot; &amp; Environment.NewLine]" BodyFormat="application/json" DisplayName="HTTP Request (legacy)" EnableSSLVerification="True" EndPoint="[&quot;https://maaden.kpib.ilpapps.com/rpa/runs/&quot;+in_Run_Id+&quot;/events&quot;]" sap:VirtualizedContainerService.HintSize="416,94.5" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[Api_Results]" StatusCode="[API_StatusCode]" TimeoutMS="6000">
+                                        <ui:HttpClient.Attachments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Attachments>
+                                        <ui:HttpClient.Cookies>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Cookies>
+                                        <ui:HttpClient.Headers>
+                                          <InArgument x:TypeArguments="x:String" x:Key="X-KPIB-API-Key">c03c12258f22b152b0d379e6ddf9e02cddc78437</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                        </ui:HttpClient.Headers>
+                                        <ui:HttpClient.Parameters>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                        </ui:HttpClient.Parameters>
+                                        <ui:HttpClient.UrlSegments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.UrlSegments>
+                                      </ui:HttpClient>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw Exception="[new BusinessRuleException(&quot;Resigeration Number for Resisteration Vat for &quot; + SupplierNumber +&quot;not appear&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="f73e5bd0-4f71-4e8f-afd2-39a3a8e85354" ContentHash="2Fw_91fh60KIcSJ3Wk2CIw" DesignTimeRectangle="873, 904, 189, 41" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='xen' tag='TD' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='{0}' /&gt;&quot;, VATNumber)]" Guid="c4d799d3-ed08-4485-a5e1-7fac2ade9fc1" InformativeScreenshot="e0fe3e65e55149666bca364f6c41ba7f.png" Reference="2gp3oYudzUuGNTHUiPaEiA/8zW3pHcgnUWSfFe2J6Wr6Q" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="f73e5bd0-4f71-4e8f-afd2-39a3a8e85354" DesignTimeRectangle="873, 864, 189, 40" FuzzySelectorArgument="&lt;webctrl aaname=' Tax Regime Code Tax Tax Jurisdiction Code Tax Registration Type Registration Number Default Registration Start Date End Date' tag='TABLE' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;webctrl type='' class='x1hq' tag='TH' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Registration Number' /&gt;" Guid="8bd677f6-13d3-4b6f-a6a9-63f5f09b3bd8" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="486,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw Exception="[new BusinessRuleException(&quot;Add button for Resisteration Vat for &quot; + SupplierNumber +&quot;not appear&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="aa7d6bdb-6d5f-4f3a-8afe-f520d6e30d73" ContentHash="uKpfBU_x-02Zy395ewd5Ug" DesignTimeRectangle="419, 191, 1101, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='xl0' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='xl0' type='' tag='DIV' aaname='Create Tax Registration' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Create Tax Registration' /&gt;" Guid="64a1f18b-106d-4b09-a6fc-17a307ab799b" InformativeScreenshot="7fbbc9549c8ddc45b4d5e80888e6e598.png" Reference="2gp3oYudzUuGNTHUiPaEiA/P0l4lK2QokKsi3MRDT_G8A" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="aa7d6bdb-6d5f-4f3a-8afe-f520d6e30d73" DesignTimeRectangle="420, 428, 174, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='af_panelHeader_title-table2' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl type='' tag='H1' class='x1cv ' aaname='Registration Details' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Registration Details' /&gt;" Guid="eb409b31-75f9-4c15-a756-d7383698be8b" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw Exception="[new BusinessRuleException(&quot;line for Resisteration Vat for &quot; + SupplierNumber +&quot;not appear&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="e3a2e38b-2f06-4042-8e43-993f7d53c3db" ContentHash="rhsTQZeVkkG0Jptme6XySQ" CvElementArea="271, 770, 27, 27" CvType="Icon" DesignTimeRectangle="244, 759, 32, 33" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='xiz' tableCol='144' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" Guid="987e0e29-ec40-4311-8872-5efbb67f0e34" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACaSURBVFhH7dNBCoNQDIRhb+/GRS/hQhSkZxDxBKK3icyuvioTCcJT5odsQun7FqawzBKIJRBLIJZArHeB5mW1tv/uBrtIIdAwTlZWn91gF0kglkAsFwiXg4fSqZvuD4Td0W+91+cC4ZzTh68O/sOTQKxngrL7qM/CQykIu0gCsQRihUC4HJzz73iv6awQ6I4EYgnEEoiVGchsA/GeY1ro92LtAAAAAElFTkSuQmCC" InformativeScreenshot="13522cb0c679f6e5f5ccc32087d98499.png" Reference="2gp3oYudzUuGNTHUiPaEiA/VtNWjvk2n0SoTBJ8QaA8Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier:*Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="e3a2e38b-2f06-4042-8e43-993f7d53c3db" DesignTimeRectangle="226, 577, 147, 37" FuzzySelectorArgument="&lt;webctrl aaname='  Tax Regime Code Tax Tax Jurisdiction Code Tax Registration Type Registration Number Default Registration Start Date End Date' aria-role='presentation' tag='TABLE' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tax Registrations' /&gt;" Guid="97c7c9cc-ff51-49c6-b931-81bbfc2e4fd2" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" ContentHash="YqoJI76uHEiXIkjM0qYGrA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFFSURBVDhPnZJZTsNAEESt7OtHjpQD5CNHyklyFrawYwirQBAQAiEQCAQiIJamnu2xHFtAYKQnW9Nd1TM97e0VCjYNuxE7YjvCYxG0ZvPPbIUGnaxBq2XWbmdhP5G3mc+nDEjo9+3HRVx5H42G+RkD3w+TRiOzXi8L+yzlvcpgY8Kg242D6aPCJ1/2XRHlr00YUCEKpMUc911QNS6k/NXfDKiK+E281Ov2LJIGK86At40D0RWSVccSPiFOXWHJGTAYQVUXnKKJ5+WyLToDJiowoMKUz3hSKtkglwsNhjJI3jUw+maQTiU8FofFos07A0YyedeHWs3uqlW7EVeVil3ouGeCqkcSHgj6NucMGEk6/CjhvbiV8FrCS8Fdk1X3JaRnQ2lmnQEjyVStC4aD51kWdJlGDcSCkjkyVQHxjAgMosXPP/A6X4CZKcozoWSPAAAAAElFTkSuQmCC" InformativeScreenshot="6e612ab46d86ef652106e3946fc3aacd.jpg" Reference="UcKJUAHKkUuYiY0FyURcZw/hxnPhcTdsUucE3tXI8r3Sg" Selector="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier: * - Oracle Fusion Cloud Applications' /&gt;" Url="[InstantURL+&quot;*&quot;]" Version="V2">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

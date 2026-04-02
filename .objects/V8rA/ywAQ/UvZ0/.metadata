@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Supplier Profile Change Request 5217139",
+  "Type": "Screen",
+  "Id": "UvZ0VXLsa06_JZFs3fAPwA",
+  "Reference": "irKn090rIUW0yJEHXo-ynw/UvZ0VXLsa06_JZFs3fAPwA",
+  "ParentRef": "irKn090rIUW0yJEHXo-ynw/ywAQfNV1PkuU9XDV9bqyQw",
+  "Created": "2026-03-29T00:10:18.2692909Z",
+  "Updated": "2026-03-29T00:10:18.2692909Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

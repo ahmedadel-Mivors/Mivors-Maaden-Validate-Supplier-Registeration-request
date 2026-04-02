@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DrfoxDwmLkmwri9NyFJmOw" Reference="irKn090rIUW0yJEHXo-ynw/GhHiYxNlfUihQTwOAPRsrQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="442, 234, 173, 42" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' parentid='pfl22' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='x2h' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Reason' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Duplicate requestCriteria not met' /&gt;" Guid="90939d01-f5d4-4be7-8675-e0240c129a97" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='5s1xl67qj' title='Supplier Registration Request 5217063 for AMAK' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="366, 244, 65, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='pfl22' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='x32b' aaname='Reason' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Reason' /&gt;" Guid="42843bf6-1d01-4bfd-a576-095cf416d756" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cd1fb1318abe6ac956c22679b275a154.png" xmlns="">0u7XC3GUNIUmcXIyXpPY3zg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

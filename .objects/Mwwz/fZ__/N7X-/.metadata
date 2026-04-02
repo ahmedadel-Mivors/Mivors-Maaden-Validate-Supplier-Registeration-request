@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Questionnaire APS Arabian contracting co",
+  "Type": "Screen",
+  "Id": "N7X-x0mpEUiMF_V0VnVQPQ",
+  "Reference": "irKn090rIUW0yJEHXo-ynw/N7X-x0mpEUiMF_V0VnVQPQ",
+  "ParentRef": "irKn090rIUW0yJEHXo-ynw/fZ__Jf_QtUKP_MHqFo4cEA",
+  "Created": "2026-03-30T21:50:50.6813446Z",
+  "Updated": "2026-03-30T21:50:50.6813446Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

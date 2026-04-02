@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="iOq5c6voR0e0IQ5kmK5Vog" Reference="irKn090rIUW0yJEHXo-ynw/kzew8IKnWUmkpspQfqYniA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1042" BrowserType="Edge" ContentHash="d6DF4hpaw0eqrrVv3g2mqA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFFSURBVDhPnZJZTsNAEESt7OtHjpQD5CNHyklyFrawYwirQBAQAiEQCAQiIJamnu2xHFtAYKQnW9Nd1TM97e0VCjYNuxE7YjvCYxG0ZvPPbIUGnaxBq2XWbmdhP5G3mc+nDEjo9+3HRVx5H42G+RkD3w+TRiOzXi8L+yzlvcpgY8Kg242D6aPCJ1/2XRHlr00YUCEKpMUc911QNS6k/NXfDKiK+E281Ov2LJIGK86At40D0RWSVccSPiFOXWHJGTAYQVUXnKKJ5+WyLToDJiowoMKUz3hSKtkglwsNhjJI3jUw+maQTiU8FofFos07A0YyedeHWs3uqlW7EVeVil3ouGeCqkcSHgj6NucMGEk6/CjhvbiV8FrCS8Fdk1X3JaRnQ2lmnQEjyVStC4aD51kWdJlGDcSCkjkyVQHxjAgMosXPP/A6X4CZKcozoWSPAAAAAElFTkSuQmCC" Reference="irKn090rIUW0yJEHXo-ynw/kzew8IKnWUmkpspQfqYniA" Selector="&lt;html app='msedge.exe' htmlwindowname='3lhd5bv4v' title='Questionnaire: Krishna Belts Pvt. Ltd - Suppliers - Oracle Fusion Cloud Applications' /&gt;" Url="https://fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview?fnd=%252FWEB-INF%252Foracle%252Fapps%252Fprc%252Fpoq%252Fregistration%252FpublicUi%252FsupplierRegistration%252Fflow%252FSupplierRegQuestionnaireBuyerWrapperFlow.xml%2523SupplierRegQuestionnaireBuyerWrapperFlow%3BParam_suppRegId%253D300003080817923%253BParam_flowName%253DBUYER%253BParam_vendorName%253DKrishna%2BBelts%2BPvt.%2BLtd%3BtabId%253D300003080817923%3BQuestionnaire%253A%2BKrishna%2BBelts%2BPvt.%2BLtd%3Bfalse%3B256%3B%3B%3B&amp;fndGlobalItemNodeId=itemNode_procurement_suppliers&amp;_afrLoop=56248008204580521&amp;_afrWindowMode=0&amp;_afrWindowId=null&amp;_adf.ctrl-state=6s98dfgfr_201&amp;_afrFS=16&amp;_afrMT=screen&amp;_afrMFW=1272&amp;_afrMFH=596&amp;_afrMFDW=1280&amp;_afrMFDH=720&amp;_afrMFC=8&amp;_afrMFCI=0&amp;_afrMFM=0&amp;_afrMFR=144&amp;_afrMFG=0&amp;_afrMFS=0&amp;_afrMFO=0" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="34d1e5222f0e3b2d2f89830f2e1f3096.jpg" xmlns="">0jlAH8asRtkqqh1ktrNcnMA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

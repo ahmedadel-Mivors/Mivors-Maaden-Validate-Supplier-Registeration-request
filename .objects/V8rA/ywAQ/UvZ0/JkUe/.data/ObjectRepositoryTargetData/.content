@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mup74535qUunhZ8nbtSDBw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="442, 288, 752, 74" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='pfl22' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl type='' tag='TEXTAREA' class='x25' aaname='Comments' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="2fd43582-a849-458e-ab23-1a834f2fd4f2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="338, 298, 93, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' parentid='pfl22' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' aaname='Comments' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' innertext='Comments' check:innerText='Comments' /&gt;" Guid="467f815e-1658-4bcd-9c53-d3defe022df2" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ef3318c58466660122aa2da8e9fbc901.png" xmlns="">0k8T6RICip0WSI3KyyZp7Gg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

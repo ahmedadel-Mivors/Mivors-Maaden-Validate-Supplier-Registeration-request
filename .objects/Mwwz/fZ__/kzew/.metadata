@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Questionnaire Test Consultant 1 - Suppli",
+  "Type": "Screen",
+  "Id": "kzew8IKnWUmkpspQfqYniA",
+  "Reference": "irKn090rIUW0yJEHXo-ynw/kzew8IKnWUmkpspQfqYniA",
+  "ParentRef": "irKn090rIUW0yJEHXo-ynw/fZ__Jf_QtUKP_MHqFo4cEA",
+  "Created": "2026-03-30T19:23:56.0986476Z",
+  "Updated": "2026-03-30T19:23:56.0986476Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
