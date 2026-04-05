@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pEoQOCpyYkGbuBkyQZ8UwQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0481739a-777d-4636-9936-1519b7f64eeb" DesignTimeRectangle="697, 865, 236, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;html app='msedge.exe' htmlwindowname='gqjnpuzss' title='Questionnaire: BLUE WAVE SHIPPING AND TRADING CORP. - Suppliers - Oracle Fusion Cloud Applications' /&gt;&lt;webctrl aria-role='presentation' id='_FOpt1:_FOr1:0:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='6' tableRow='1' tag='TABLE' colName='Please upload Commercial Registration Certificate / Certificate of IncorporationQuestion Texta. Agree to Submit*Response AttachmentsCert of Incumbency.PDF (1 more...)CommentsComments' innertext='*Response AttachmentsCert of Incumbency.PDF (1 more...)' rowName='*.*' /&gt;&lt;webctrl aaname='Cert of Incumbency.PDF (1 more...)' href='#' id='_FOpt1:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='2' tableRow='1' tag='A' colName='Cert of Incumbency.PDF (1 more...)' innertext='Cert of Incumbency.PDF (1 more...)' rowName='*Response Attachments' check:innerText='Cert of Incumbency.PDF*' /&gt;" Guid="124efd02-13cb-4869-9435-9a967caf9982" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='gqjnpuzss' title='Questionnaire: BLUE WAVE SHIPPING AND TRADING CORP. - Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="509, 865, 188, 17" FullSelectorArgument="&lt;webctrl parentid='_FOpt1:_FOr1*' parentname='_FOf1' tableCol='1' tableRow='1' tag='TR' colName='*Response Attachments' innertext='*Response AttachmentsCert of Incumbency.PDF*' rowName='*Response AttachmentsCert of Incumbency.PDF*' /&gt;&lt;webctrl tableRow='1' tag='TD' innertext='*Response Attachments' rowName='*Response Attachments' /&gt;" Guid="dd17fd5a-2ded-443c-8c53-d0d7db58fedc" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e756eb3970262a2c5fa4e339b2321431.png" xmlns="">0ey8kBRHJ4UWEty3HTkqZEg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
