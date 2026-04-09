@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="awxViRtuYkSB4o5d-WDpgw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" CVScreenId="2b0ced7d-ed43-43d3-b6a4-ba3e8a3440b4" CvElementArea="954, 338, 55, 45" CvTextArea="965, 349, 31, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="956, 340, 51, 42" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='1' tag='BUTTON' _afrpdo='cancel' aaname='OK' colName='OK' rowName='OK' type='button' /&gt;" Guid="e34f3882-137e-4819-8d3b-414fd58c1e95" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2b0ced7d-ed43-43d3-b6a4-ba3e8a3440b4" DesignTimeRectangle="730, 221, 263, 44" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='xl3' type='' tag='TD' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Error' /&gt;" Guid="7ff75370-c614-40e9-a9ec-43d7cfe4c6a8" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="496c7233966acdf3839a9ba59a02bc5d.png" xmlns="">0kGKOWgmk0U-sjJAJH4TsWQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

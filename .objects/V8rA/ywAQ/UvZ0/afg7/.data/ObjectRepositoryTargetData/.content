@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xIYH6BDKXkuNH3_jn2RTZQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="46, 105, 440, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Delegate to allow selected user to act on my behalf' tableRow='1' tag='LABEL' colName='Transfer ownership to another user or groupDelegate to allow selected user to act on my behalf' innertext='Delegate to allow selected user to act on my behalf' visibleinnertext='Delegate to allow selected user to act on my behalf' /&gt;" Guid="b8b78350-2252-4c91-bb7c-3fc83d58e6ab" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c7b817a4e78bac24225d1bf2e1909f6d.png" xmlns="">07JsoozBPFUCEFwUnxI-BeA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

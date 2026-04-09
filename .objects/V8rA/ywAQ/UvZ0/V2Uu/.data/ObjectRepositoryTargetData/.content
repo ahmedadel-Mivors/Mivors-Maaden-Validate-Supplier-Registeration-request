@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AFS0CkzIJkeGK8QF0NVr0g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="82, 648, 362, 67" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='reAsIdB:idSTable::db' tableCol='2' tag='TD' colName='alatwahsal@maaden.com.sa' innertext='alatwahsal@maaden.com.sa' /&gt;" Guid="71ca33ba-a573-4227-b1c9-02aa1c9a090a" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1a0fe5a0a8d79d880d8e4717507d244a.png" xmlns="">050rdob2Z7E-9HFI29IKtgg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

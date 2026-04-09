@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Y31U4XgRCkiHdF_meuYRDg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="40, 673, 19, 19" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='reAsIdB:idSTable::db' parentname='f1' tableCol='2' tableRow='3' tag='TR' colName='{0}' /&gt;&lt;webctrl tableRow='1' tag='INPUT' id='reAsIdB:idSTable:0:selIdCB::content' name='reAsIdB:idSTable:0:selIdCB' type='checkbox' value='t' /&gt;&quot;, CurrentRessignUsers)]" Guid="58b533db-20b9-4bc4-9da2-f6d4d5c010b7" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='eszn2tubq' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="39976b6e14587fea2fd91d5b2ad806cd.png" xmlns="">01SWGUH6YjEezwtpPzCyX9w</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="CurrentRessignUsers" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

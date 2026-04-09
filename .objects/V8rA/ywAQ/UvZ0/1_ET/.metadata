@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Attachment with the sam…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "1_ET5mc4_ECbURVFm27H1g",
+  "Reference": "irKn090rIUW0yJEHXo-ynw/1_ET5mc4_ECbURVFm27H1g",
+  "ParentRef": "irKn090rIUW0yJEHXo-ynw/UvZ0VXLsa06_JZFs3fAPwA",
+  "Created": "2026-04-08T22:07:50.5503363Z",
+  "Updated": "2026-04-08T22:07:50.5503363Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

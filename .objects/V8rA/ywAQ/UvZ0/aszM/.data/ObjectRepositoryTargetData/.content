@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KIpNDhG5w0eSPvwOUQGE5w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" CVScreenId="213fc54d-c321-4a3e-98a6-44846af295da" DesignTimeRectangle="1212, 590, 84, 42" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='attCan' tableRow='1' tag='BUTTON' aaname='Cancel' colName='OKOKCancel' innertext='Cancel' rowName='OKOKCancel' /&gt;" Guid="b48ed6b7-6f0c-4ce9-82fa-7df0813c88da" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5d1e79fe113d2748fd9b593cc2c08025.png" xmlns="">0A9t4tVYiUEGqVOWO0hvv-Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

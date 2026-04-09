@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OYtXNobz9kuSm9JerdGZHw" Reference="irKn090rIUW0yJEHXo-ynw/jR8ULlA_pUSFFwcqRzQC7Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/adf.task-flow" DesignTimeRectangle="624, 462, 236, 42" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='*' tag='INPUT' aaname=' ID' autocomplete='username' rowName=' ID' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='x25' tag='INPUT' aaname=' ID' autocomplete='username' rowName=' ID' type='text' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:autocomplete='fuzzy' fuzzylevel:autocomplete='0.0' matching:rowName='fuzzy' fuzzylevel:rowName='0.0' /&gt;" Guid="f7b526f1-b811-4fe9-bdd3-51f5383016c9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Supplier Registration Request*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="596, 473, 18, 20" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='reAsIdB:pflx1' tag='TABLE' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl type='' tag='LABEL' class='af_inputText_label-text' aaname=' ID' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='ID' /&gt;" Guid="653c3e0c-9458-4675-80d2-16c55a8d80fc" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2c7cb685405b6c8766d226517304381a.png" xmlns="">0mXUYX2a1-ES6e3yOc6FvOQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
