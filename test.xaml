@@ -50,6 +50,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -120,9 +122,10 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="602,5213.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="602,3654" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="x:String" Default="[&quot;- Result: ✅ Correct Document&quot; + Environment.NewLine + &quot;- Detected Document Type: Saudi Arabian Commercial Registration Certificate&quot; + Environment.NewLine + &quot;- Confidence: High&quot; + Environment.NewLine + &quot;- Reason: The document contains the title &quot;&quot;Commercial Registration Certificate&quot;&quot;, the CR number, company name, issue date, and expiry date, all of which are key indicators of a commercial registration certificate. The presence of &quot;&quot;Saudi Business Center&quot;&quot; and the website domain &quot;&quot;.saudibusiness.gov.sa&quot;&quot; further confirm that it is a Saudi Arabian document.&quot; + Environment.NewLine + &quot;- Missing or Unclear Fields: None&quot; + Environment.NewLine + &quot;- Extracted Data:&quot; + Environment.NewLine + &quot;{&quot; + Environment.NewLine + &quot;  &quot;&quot;company_name&quot;&quot;: &quot;&quot;WJ SAUDI COMPANY LIMITED&quot;&quot;,&quot; + Environment.NewLine + &quot;  &quot;&quot;cr_number&quot;&quot;: &quot;&quot;7025565545&quot;&quot;,&quot; + Environment.NewLine + &quot;  &quot;&quot;expiration_date&quot;&quot;: &quot;&quot;17/07/2026&quot;&quot;&quot; + Environment.NewLine + &quot;}&quot;]" Name="ValidationStatus" />
@@ -133,17 +136,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Questionnaire Test Consultant 1 - Suppli(1)" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="556,5142.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Questionnaire Test Consultant 1 - Suppli(1)" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="556,3583.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,4938.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,3379.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="respod" />
-              <Variable x:TypeArguments="x:String" Default="Acknowledgement of MAADEN Supplier Code of Ethics and Conduct" Name="Question" />
-              <Variable x:TypeArguments="x:String" Default="Manufacturer" Name="Section" />
+              <Variable x:TypeArguments="x:String" Name="Question">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">Acknowledgement of MAADEN Supplier Code of Ethics and Conduct</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="Section">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">Manufacturer</Literal>
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,28 +166,11 @@
                 <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="611, 597, 907, 64" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='_FOpt1:_FOr*' parentname='_FOf1' tableCol='6' tableRow='1' tag='DIV' colName='*&quot;+Question+&quot;Question Text*Response Attachment*Comment*' innertext='*.*Response Attachment*' /&gt;&quot;]" Guid="e7e29fed-ffc5-49a0-ac44-92b8149bfa7c" InformativeScreenshot="81c6c89f92803fdfe345e138b15c5ef4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='ztsmgh7b6' title='Questionnaire: Tetra Agency - Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetText DisplayName="Get Text 'a. Agree to SubmitResp…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,134" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" TextString="[respod]" Version="V5">
-                    <uix:NGetText.Target>
-                      <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="611, 474, 907, 180" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tableCol='6' tableRow='1' tag='SPAN' colName='&quot;+Question+&quot;*' innertext='*.*Response Attachments*' rowName='*' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl type='' class='x1a' tag='SPAN' colName='&quot;+Question+&quot;*' rowName='*' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:colName='0.0' fuzzylevel:rowName='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&quot;]" Guid="1330ec14-8ec1-447b-9122-356097d9dcf6" InformativeScreenshot="ad47061be68f1b436d260e0ddc7cd44d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire: *Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
-                    </uix:NGetText.Target>
-                  </uix:NGetText>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
+            <uix:NGetText DisplayName="Get Text 'a. Agree to SubmitResp…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,147.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" TextString="[respod]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="611, 474, 907, 180" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tableCol='6' tableRow='1' tag='SPAN' colName='&quot;+Question+&quot;*' innertext='*.*Response Attachments*' rowName='*' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl type='' class='x1a' tag='SPAN' colName='&quot;+Question+&quot;*' rowName='*' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:colName='0.0' fuzzylevel:rowName='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&quot;]" Guid="1330ec14-8ec1-447b-9122-356097d9dcf6" InformativeScreenshot="ad47061be68f1b436d260e0ddc7cd44d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire: *Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
             <If Condition="[respod.Contains(&quot;more...)&quot;)]" DisplayName="If Resond Attachment (More)" sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="If_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -211,6 +205,80 @@
                 </Sequence>
               </If.Else>
             </If>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="520,128" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[respod]" />
+            <If Condition="[respod.Split(&quot;Response Attachments&quot;)(1).Contains(&quot;.pdf&quot;) or respod.Split(&quot;Response Attachments&quot;)(1).Contains(&quot;.PDF&quot;)]" DisplayName="If aTTACHEMNT pdf " sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,965.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="452,128" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[respod.Split(&quot;Response Attachments&quot;)(1).Split(&quot;.pdf&quot;)(0)+&quot;.*&quot;]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="452,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[respodattach]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[respod.Split("Response Attachments")(1).Split(".pdf")(0)+"*"]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[respodattach.Contains(&quot;Comments&quot;)]" DisplayName="If has Comments" sap:VirtualizedContainerService.HintSize="452,592.6666666666666" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,363.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,128" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[respodattach.IndexOf(&quot;Comments&quot;).ToString]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="416,171.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_11">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[respodattach]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[respodattach.Substring(0,respodattach.IndexOf("Comments"))]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,363.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="452,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[respodattach]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[respod.Split("Response Attachments")(1).Split(".pdf")(0)+"*"]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,118.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[respod.Split(&quot;Response Attachments&quot;)(1).Split(&quot;.png&quot;)(0)+&quot;.png&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
             <Assign sap:VirtualizedContainerService.HintSize="520,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[respod]</OutArgument>
@@ -219,55 +287,10 @@
                 <InArgument x:TypeArguments="x:String">[respod.Replace("CommentsComments","").Trim.Replace("'","*").Trim.Replace("&amp;","*").Trim.Replace(")","*").Trim.Replace("(","*")]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="520,128" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[respod]" />
-            <If Condition="[respod.Split(&quot;Response Attachments&quot;)(1).Contains(&quot;.pdf&quot;) or respod.Split(&quot;Response Attachments&quot;)(1).Contains(&quot;.PDF&quot;)]" DisplayName="If aTTACHEMNT pdf " sap:VirtualizedContainerService.HintSize="520,867.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[respodattach.Length&gt;50]" DisplayName="If aTTACHEMNT pdf " sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,363.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,128" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[respod.Split(&quot;Response Attachments&quot;)(1).Split(&quot;.pdf&quot;)(0)+&quot;.*&quot;]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,171.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[respodattach]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[respod.Split("Response Attachments")(1).Split(".pdf")(0)+"*"]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,360" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[respodattach]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[respod.Split("Response Attachments")(1).Split(".pdf")(0)+"*"]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[respod.Split(&quot;Response Attachments&quot;)(1).Split(&quot;.png&quot;)(0)+&quot;.png&quot;]" />
-                </Sequence>
-              </If.Else>
-            </If>
-            <If Condition="[respodattach.Length&gt;50]" DisplayName="If aTTACHEMNT pdf " sap:VirtualizedContainerService.HintSize="520,690" sap2010:WorkflowViewState.IdRef="If_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -300,41 +323,86 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cert of Incumbency.PDF'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CERTIFICATE OF INCORPOR…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0481739a-777d-4636-9936-1519b7f64eeb" DesignTimeRectangle="697, 865, 236, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="[&quot;&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Oracle Fusion Cloud Applications' /&gt;&lt;webctrl aria-role='presentation' id='_FOpt1:_FOr1:0:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='6' tableRow='1' tag='TABLE' colName='*&quot;+Question+&quot;*Response Attachment*&quot;+respodattach+&quot;*' innertext='*Response Attachment*&quot;+respodattach+&quot;*' rowName='*.*' /&gt;&lt;webctrl aaname='*&quot;+respodattach+&quot;' href='#' id='_FOpt1:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='2' tableRow='1' tag='A' colName='*&quot;+respodattach+&quot;*' innertext='*&quot;+respodattach+&quot;*' rowName='*Response Attachment*' check:innerText='*&quot;+respodattach+&quot;*' /&gt;&quot;]" Guid="124efd02-13cb-4869-9435-9a967caf9982" InformativeScreenshot="e756eb3970262a2c5fa4e339b2321431.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="509, 865, 188, 17" FullSelectorArgument="&lt;webctrl parentid='_FOpt1:_FOr1*' parentname='_FOf1' tableCol='1' tableRow='1' tag='TR' colName='*Response Attachments' innertext='*Response AttachmentsCert of Incumbency.PDF*' rowName='*Response AttachmentsCert of Incumbency.PDF*' /&gt;&lt;webctrl tableRow='1' tag='TD' innertext='*Response Attachments' rowName='*Response Attachments' /&gt;" Guid="dd17fd5a-2ded-443c-8c53-d0d7db58fedc" SearchSteps="Selector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
+                <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0ca9f2a4-ae81-4c3c-94e2-e7c70bd3cb61" DesignTimeRectangle="836, 595, 343, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='_FOpt1:_F*' parentname='_FOf1' tableRow='1' tag='DIV' innertext='*.{0}Question Text*.*Response Attachment*{1}*' /&gt;&lt;webctrl aaname='{1}' tableRow='1' tag='SPAN' colName='{1}' innertext='{1}' rowName='*Response Attachment*' /&gt;&quot;, Question, respodattach)]" Guid="321ac6a7-40a8-4ea2-a01c-6d04b0db1d39" InformativeScreenshot="714b08649fee79141121b7e1f4c445c7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire: *Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'efe34248-2dbe-4a76-b1ae…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="836, 910, 358, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='_FOpt1:_FOr*' parentname='_FOf1' tableCol='*' tableRow='1' tag='DIV' innertext='*&quot;+Question+&quot;*Response Attachments&quot;+respodattach+&quot;*' /&gt;&lt;webctrl aaname='*&quot;+respodattach+&quot;*' tableRow='1' tag='SPAN' innertext='*&quot;+respodattach+&quot;*' rowName='*Response Attachments' /&gt;&quot;]" Guid="d5c84b48-3934-4d4d-9010-d0619182dc9c" InformativeScreenshot="834b8bba4cb42a35236ccbc4919c3823.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:* Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,360.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_6">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '11 Maaden Supplier Code…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cert of Incumbency.PDF'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0481739a-777d-4636-9936-1519b7f64eeb" DesignTimeRectangle="697, 865, 236, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="[&quot;&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Oracle Fusion Cloud Applications' /&gt;&lt;webctrl aria-role='presentation' id='_FOpt1:_FOr1:0:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='*' tableRow='1' tag='TABLE' colName='*&quot;+Question+&quot;*Response Attachment*&quot;+respodattach+&quot;*' innertext='*Response Attachment*&quot;+respodattach+&quot;*' rowName='*.*' /&gt;&lt;webctrl aaname='*&quot;+respodattach+&quot;' href='#' id='_FOpt1:_F*' parentid='_FOpt1:_F*' parentname='_FOf1' tableCol='2' tableRow='1' tag='A' colName='*&quot;+respodattach+&quot;*' innertext='*&quot;+respodattach+&quot;*' rowName='*Response Attachment*' check:innerText='*&quot;+respodattach+&quot;*' /&gt;&quot;]" Guid="124efd02-13cb-4869-9435-9a967caf9982" InformativeScreenshot="e756eb3970262a2c5fa4e339b2321431.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="509, 865, 188, 17" FullSelectorArgument="&lt;webctrl parentid='_FOpt1:_FOr1*' parentname='_FOf1' tableCol='1' tableRow='1' tag='TR' colName='*Response Attachments' innertext='*Response AttachmentsCert of Incumbency.PDF*' rowName='*Response AttachmentsCert of Incumbency.PDF*' /&gt;&lt;webctrl tableRow='1' tag='TD' innertext='*Response Attachments' rowName='*Response Attachments' /&gt;" Guid="dd17fd5a-2ded-443c-8c53-d0d7db58fedc" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,220" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'efe34248-2dbe-4a76-b1ae…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="836, 910, 358, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='_FOpt1:_FOr*' parentname='_FOf1' tableCol='*' tableRow='1' tag='DIV' innertext='*&quot;+Question+&quot;*Response Attachments&quot;+respodattach+&quot;*' /&gt;&lt;webctrl aaname='*&quot;+respodattach+&quot;*' tableRow='1' tag='SPAN' innertext='*&quot;+respodattach+&quot;*' rowName='*Response Attachments' /&gt;&quot;]" Guid="d5c84b48-3934-4d4d-9010-d0619182dc9c" InformativeScreenshot="834b8bba4cb42a35236ccbc4919c3823.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:* Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,61.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '11 Maaden Supplier Code…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" CVScreenId="0ecc02ca-03ba-463c-9797-0a68e6661cbd" ContentHash="gloiIZN7AEWBfWtoVXFoDw" DesignTimeRectangle="836, 294, 330, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl id='_FOpt1:_FOr*' parentid='_FOpt1*' parentname='_FOf1' tableCol='6' tableRow='1' tag='DIV' colName='&quot;+Question+&quot;*' innertext='*.*Response Attachments*' /&gt;&lt;webctrl aaname='*' tableRow='1' tag='SPAN' colName='*' innertext='*' rowName='*Response Attachments' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;webctrl id='_FOpt1:_FOr*' parentid='_FOpt1*' parentname='_FOf1' tag='DIV' colName='&quot;+Question+&quot;*' innertext='*.*Response Attachments*' fuzzylevel:id='0.0' fuzzylevel:parentid='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' fuzzylevel:colName='0.0' fuzzylevel:innertext='0.0' /&gt;&lt;webctrl aaname='*.*' type='' tag='SPAN' colName='*.*' innertext='*.*' rowName='*Response Attachments' class='' fuzzylevel:aaname='0.0' fuzzylevel:colName='0.0' fuzzylevel:innertext='0.0' fuzzylevel:rowName='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:text='*.*' /&gt;&quot;]" Guid="6d7bbe22-d17f-4cce-84da-2a31362c7384" InformativeScreenshot="5c95153a3a0c04d42d19ffd4d741d7fc.png" Reference="irKn090rIUW0yJEHXo-ynw/EichNu2eqEmDZ0stEcXaPA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
                 </Sequence>
               </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NCheckState DisplayName="Check App State 'Attachments'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,1713.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Timeout="90" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'Attachments'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,1720" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Timeout="90" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="517.6,1064.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="518,1068" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="DownloadStatus" />
                     <Variable x:TypeArguments="si:FileInfo" Name="DownloadedFile" />
@@ -345,7 +413,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetLastDownloadedFile FileResource="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="484,637.6" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,dwn" Timeout="240">
+                  <ui:GetLastDownloadedFile FileResource="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="484,641.3333333333334" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,dwn" Timeout="240">
                     <ui:GetLastDownloadedFile.Body>
                       <ActivityAction>
                         <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,303.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -355,15 +423,9 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="8" DisplayName="Click 'File Name or URL'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="8" DisplayName="Click 'File Name or URL'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0a141e4d-8cc6-4685-9d13-e6eef7e26a9c" Version="V5">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="411, 640, 143, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tableCol='2' tableRow='*' tag='TABLE' _afrit='1' colName='FileFrom Supplier*' innertext='FileFrom Supplier*' parentid='_FOpt1:_FOr1:0:_FONSr2:0:MAt2:0:AP1:r1:0:a2:applicationsTable:_ATp:attachmentTable::db' /&gt;&lt;webctrl aaname='{0}' tag='A' href='/fscmUI/content/conn/FusionAppsContentRepository/uuid/*' innertext='{0}' tableCol='3' /&gt;&quot;, respodattach)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' _afrit='1' colName='FileFrom Supplier*' innertext='FileFrom Supplier*' parentid='_FOpt1:_FOr1:0:_FONSr2:0:MAt2:0:AP1:r1:0:a2:applicationsTable:_ATp:attachmentTable::db' matching:_afrit='fuzzy' fuzzylevel:_afrit='0.0' fuzzylevel:colName='0.0' fuzzylevel:innertext='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl aaname='{0}' tag='A' href='/fscmUI/content/conn/FusionAppsContentRepository/uuid/*' innertext='{0}' type='' class='xij' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' fuzzylevel:href='0.0' matching:innertext='fuzzy' fuzzylevel:innertext='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:text='{0}' /&gt;&quot;, respodattach)]" Guid="5dc89ae7-6a95-4547-b90e-5268d25cccde" InformativeScreenshot="d6312e2fa9b34e27dfc91053b80cb781.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="403, 628, 467, 47" FullSelectorArgument="&lt;webctrl tableCol='2' tag='TABLE' innertext='FileFrom Supplier*' parentid='_FOpt1:_FOr1:0:_FONSr2:0:MAt2:0:AP1:r1:0:a2:applicationsTable:_ATp:attachmentTable::db' /&gt;&lt;webctrl tableCol='3' tag='TD' rowName='File' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' innertext='FileFrom Supplier*' parentid='_FOpt1:_FOr1:0:_FONSr2:0:MAt2:0:AP1:r1:0:a2:applicationsTable:_ATp:attachmentTable::db' fuzzylevel:innertext='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl type='' tag='TD' rowName='File' class='xen' aaname='' matching:rowName='fuzzy' fuzzylevel:rowName='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='/content/conn/FusionAppsContentRepository/uuid/dDocID:49969732?download&amp;amp;XFND_SCHEME_ID=1&amp;amp;XFND_CERT_FP=E60CB30391F4DA158D45F945C5FD672C63312BAE&amp;amp;XFND_RANDOM=-6557259926900842558&amp;amp;XFND_EXPIRES=1771268804894&amp;amp;XFND_SIGNATURE=QIeQKTr8D-Ym5UBHc7iublc5gFL4RZs0t7Iz0i8vzuD-5Kp~w3Qv42-dXq6MD4K8wGetR55~ojEZuuScPyzlgOg-NKzJPacAvH-pIbbloNh2NyrGe~WeFYbuS6f5w7bg8TlYa9uLPPD8YaLuUaVr84HQ0RVjIi6teOIMU97sSybq-1yi5wVSHiyc0LDumOP-Mjj5cIPT60kOqCZ-UAam0fyhXCBoAkqH6-tJrdALghEhN1qYGkWHOOaslUiTEhYJ9skCiK2TK5L2QKR5fjgO1HXTLCM2WYX6SA7M8-NOIpRyHB3fYQ82fo8WwMWdVcePFD1x7kPXSb918W06KnRZYA__&amp;amp;Id=49969732CR Lisega SE.pdfCR Lisega SE.pdfCR Lisega SE.pdf' /&gt;" Guid="9334b857-fc9d-4438-ba23-1d6fcd6da305" SearchSteps="Selector, FuzzySelector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
+                              <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="411, 583, 343, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='_FOpt1:_FOr*' parentname='_FOf1' tableCol='3' tableRow='1' tag='TD' visibleinnertext='{0}' /&gt;&lt;webctrl aaname='{0}' tableRow='1' tag='A' innertext='{0}' /&gt;&quot;, respodattach)]" Guid="7811b18a-1a89-4ea1-a85b-ebd2ddfacecd" InformativeScreenshot="c49a35fe0e4ebcd8c79740d4d34ec43a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
                           <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
@@ -449,7 +511,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="fa-epod-dev1-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" ContentHash="kFEGIJfx6EiQJlgQYuQ0NA" DesignTimeRectangle="45, 469, 1806, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' tableCol='2' tableRow='1' tag='TABLE' role='element' visibleinnertext='&amp;#x9;&amp;#xA;Attachments&amp;#xA;&amp;#x9;' /&gt;&lt;webctrl class='xl0' tableRow='1' tag='DIV' aaname='Attachments' colName='Attachments' id='_FOpt1:_FOr1:0:_FONSr2:0:MAt2:0:AP1:r1:0:d2::_ttxt' innertext='Attachments' /&gt;" Guid="bb456cf6-37b2-47ad-8a1a-301dffef379f" InformativeScreenshot="43d9569a366f497dcfabc667e1af2d9a.png" Reference="YngkLTyCX0ORUgEe7GnCQw/SpHAgGe2HUSvPlUrrN4Prg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*- Suppliers - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="fa-epod-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FndOverview" DesignTimeRectangle="45, 422, 1806, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='1' tag='DIV' aaname='Attachments' colName='Attachments' innertext='Attachments' /&gt;" Guid="3982b59f-a9b6-4b93-84ba-03762ecb5407" InformativeScreenshot="f6b00d4e824956882b492cbab7190ca6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='Questionnaire:*Oracle Fusion Cloud Applications' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">

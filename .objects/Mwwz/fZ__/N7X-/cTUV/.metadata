@@ -1,0 +1,14 @@
+﻿{
+  "Name": "CERTIFICATE OF INCORPOR…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "cTUVO7_EOE6eNwF_mDaKgQ",
+  "Reference": "irKn090rIUW0yJEHXo-ynw/cTUVO7_EOE6eNwF_mDaKgQ",
+  "ParentRef": "irKn090rIUW0yJEHXo-ynw/N7X-x0mpEUiMF_V0VnVQPQ",
+  "Created": "2026-04-11T00:10:26.3856822Z",
+  "Updated": "2026-04-11T00:10:26.3856822Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
