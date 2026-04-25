@@ -52,7 +52,6 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
@@ -107,7 +106,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="954.6666666666666,2520.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="601.3333333333333,2520.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="URL" />
       <Variable x:TypeArguments="x:String" Name="Madeen_user" />
@@ -139,7 +138,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <uix:NWindowOperation DisplayName="Window Operation - Bring window to foreground" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="NWindowOperation_1" Operation="ToForeground" ScopeIdentifier="12663aed-e34a-4247-979d-f5d77fa18bad" Version="V5" />
-            <uix:NCheckState DisplayName="Check App State 'Microsft Login" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1425.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="12663aed-e34a-4247-979d-f5d77fa18bad" Timeout="90" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'Microsft Login" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1425.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="12663aed-e34a-4247-979d-f5d77fa18bad" Timeout="35" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,567.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_36">
                   <sap:WorkflowViewStateService.ViewState>
@@ -270,7 +269,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'User ID'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,52" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="12663aed-e34a-4247-979d-f5d77fa18bad" Timeout="35" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'User ID'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,52" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="12663aed-e34a-4247-979d-f5d77fa18bad" Timeout="10" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_31">
                   <sap:WorkflowViewStateService.ViewState>
